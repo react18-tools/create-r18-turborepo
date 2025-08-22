@@ -20,7 +20,7 @@ import readline from "readline";
 
 const DEFAULT_NAME = "react18-tools-turborepo-template";
 
-function askQuestion(query: string): Promise<string> {
+export const askQuestion = (query: string): Promise<string> => {
   const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
@@ -31,9 +31,9 @@ function askQuestion(query: string): Promise<string> {
       resolve(ans);
     }),
   );
-}
+};
 
-async function main(): Promise<void> {
+const main = async (): Promise<void> => {
   let projectName = process.argv[2];
 
   if (!projectName) {
@@ -51,13 +51,13 @@ async function main(): Promise<void> {
     execSync(cmd, { stdio: "inherit" });
   } catch (err: any) {
     console.error("❌ Error while running create-turbo:", err.message);
-    process.exit(1);
+    return;
   }
 
   // Step 2: Verify directory exists
   if (!existsSync(projectDir)) {
     console.error(`❌ Expected directory not found: ${projectDir}`);
-    process.exit(1);
+    return;
   }
 
   // Step 3: Run rebrand
@@ -69,10 +69,10 @@ async function main(): Promise<void> {
     });
   } catch (err: any) {
     console.error("❌ Rebrand step failed:", err.message);
-    process.exit(1);
+    return;
   }
 
   console.log(`\n✅ Done! Your project is ready in: ${projectDir}\n`);
-}
+};
 
 main();
