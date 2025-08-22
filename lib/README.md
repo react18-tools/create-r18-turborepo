@@ -1,129 +1,115 @@
-# Create R18 Turborepo <img src="https://raw.githubusercontent.com/mayank1513/mayank1513/main/popper.png" style="height: 40px"/>
+# Create React18 Turborepo <img src="https://raw.githubusercontent.com/mayank1513/mayank1513/main/popper.png" style="height: 40px"/>
 
-[![test](https://github.com/react18-tools/create-r18-turborepo/actions/workflows/test.yml/badge.svg)](https://github.com/react18-tools/create-r18-turborepo/actions/workflows/test.yml) [![Maintainability](https://api.codeclimate.com/v1/badges/aa896ec14c570f3bb274/maintainability)](https://codeclimate.com/github/react18-tools/create-r18-turborepo/maintainability) [![codecov](https://codecov.io/gh/react18-tools/create-r18-turborepo/graph/badge.svg)](https://codecov.io/gh/react18-tools/create-r18-turborepo) [![Version](https://img.shields.io/npm/v/create-r18-turborepo.svg?colorB=green)](https://www.npmjs.com/package/create-r18-turborepo) [![Downloads](https://img.jsdelivr.com/img.shields.io/npm/d18m/create-r18-turborepo.svg)](https://www.npmjs.com/package/create-r18-turborepo) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/create-r18-turborepo) [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/from-referrer/)
+[![test](https://github.com/react18-tools/create-r18-turborepo/actions/workflows/test.yml/badge.svg)](https://github.com/react18-tools/create-r18-turborepo/actions/workflows/test.yml)
+[![Maintainability](https://qlty.sh/gh/react18-tools/projects/create-r18-turborepo/maintainability.svg)](https://qlty.sh/gh/react18-tools/projects/create-r18-turborepo)
+[![codecov](https://codecov.io/gh/react18-tools/create-r18-turborepo/graph/badge.svg)](https://codecov.io/gh/react18-tools/create-r18-turborepo)
+[![Version](https://img.shields.io/npm/v/create-r18-turborepo.svg?colorB=green)](https://www.npmjs.com/package/create-r18-turborepo)
+[![Downloads](https://img.jsdelivr.com/img.shields.io/npm/d18m/create-r18-turborepo.svg)](https://www.npmjs.com/package/create-r18-turborepo)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/create-r18-turborepo)
 
-Create R18 Turborepo is a comprehensive library designed to unlock the full potential of React 18 server components. It provides customizable loading animation components and a fullscreen loader container, seamlessly integrating with React and Next.js.
+🚀 **Bootstrap your next Turborepo project in seconds** — powered by [react18-tools/turborepo-template](https://github.com/react18-tools/turborepo-template).
+This CLI wraps `create-turbo` and automatically runs `pnpm rebrand` to set up your project for immediate development.
 
-✅ Fully Treeshakable (import from `create-r18-turborepo/client/loader-container`)
+---
 
-✅ Fully TypeScript Supported
+## ✨ Features
 
-✅ Leverages the power of React 18 Server components
+- 📦 One-liner project creation (`pnpm create r18 my-app`)
+- 👨‍💻 Interactive mode — prompts for project name if not provided
+- 🎨 Auto-runs `pnpm rebrand` to customize boilerplate naming
+- ⚡ Works with **pnpm** by default
+- 🔗 Built on top of official `create-turbo` flow
 
-✅ Compatible with all React 18 build systems/tools/frameworks
+---
 
-✅ Documented with [Typedoc](https://react18-tools.github.io/create-r18-turborepo) ([Docs](https://react18-tools.github.io/create-r18-turborepo))
+## 📦 Installation
 
-✅ Examples for Next.js, and Vite
+Run with `pnpx` or `pnpm create` — no need to install globally.
 
-> <img src="https://raw.githubusercontent.com/mayank1513/mayank1513/main/popper.png" style="height: 20px"/> Star [this repository](https://github.com/react18-tools/create-r18-turborepo) and share it with your friends.
-
-## Getting Started
-
-### Installation
-
-```bash
-pnpm add create-r18-turborepo
-```
-
-**_or_**
-
-```bash
-npm install create-r18-turborepo
-```
-
-**_or_**
+### Canonical package (recommended)
 
 ```bash
-yarn add create-r18-turborepo
+pnpx create-r18-turborepo-template my-app
 ```
 
-## Want Lite Version? [![npm bundle size](https://img.shields.io/bundlephobia/minzip/create-r18-turborepo-lite)](https://www.npmjs.com/package/create-r18-turborepo-lite) [![Version](https://img.shields.io/npm/v/create-r18-turborepo-lite.svg?colorB=green)](https://www.npmjs.com/package/create-r18-turborepo-lite) [![Downloads](https://img.jsdelivr.com/img.shields.io/npm/d18m/create-r18-turborepo-lite.svg)](https://www.npmjs.com/package/create-r18-turborepo-lite)
+### Short aliases (same package, same version)
 
 ```bash
-pnpm add create-r18-turborepo-lite
+pnpm create r18 my-app
+pnpx create-r18 my-app
+pnpx create-r18-turbo my-app
+pnpx turborepo-template-init my-app
 ```
 
-**or**
+👉 For docs and issues, always refer to **`create-r18-turborepo-template`**.
+
+---
+
+## 🚀 Usage
+
+### Create a project with a name
 
 ```bash
-npm install create-r18-turborepo-lite
+pnpm create r18 my-app
 ```
 
-**or**
+### Interactive (prompts for name)
 
 ```bash
-yarn add create-r18-turborepo-lite
+pnpm create r18
 ```
 
-> You need `r18gs` as a peer-dependency
+👉 If you press Enter without typing, it defaults to:
 
-### Import Styles
-
-You can import styles globally or within specific components.
-
-```css
-/* globals.css */
-@import "create-r18-turborepo/dist";
+```
+react18-tools-turborepo-template
 ```
 
-```tsx
-// layout.tsx
-import "create-r18-turborepo/dist/index.css";
+---
+
+## 🔧 What it does
+
+1. Runs `create-turbo` with the **react18-tools/turborepo-template** example.
+2. Uses **pnpm** as the package manager.
+3. Creates the project folder with your chosen name.
+4. Runs `pnpm rebrand` inside the project to customize boilerplate.
+
+---
+
+## 🛠 Example
+
+```bash
+pnpm create r18 turbo-demo
 ```
 
-For selective imports:
+Output:
 
-```css
-/* globals.css */
-@import "create-r18-turborepo/dist/client"; /** required if you are using LoaderContainer */
-@import "create-r18-turborepo/dist/server/bars/bars1";
+```
+🔨 Creating turborepo project: turbo-demo
+...
+🚀 Rebranding project in turbo-demo
+✅ Done! Your project is ready in: /path/to/turbo-demo
 ```
 
-### Usage
+---
 
-Using loaders is straightforward.
+## 📚 Related
 
-```tsx
-import { Bars1 } from "create-r18-turborepo/dist/server/bars/bars1";
+- [Turborepo Docs](https://turbo.build/repo/docs)
+- [react18-tools/turborepo-template](https://github.com/react18-tools/turborepo-template)
 
-export default function MyComponent() {
-  return someCondition ? <Bars1 /> : <>Something else...</>;
-}
-```
+---
 
-For detailed API and options, refer to [the API documentation](https://react18-tools.github.io/create-r18-turborepo).
+## 🤝 Contributing
 
-**Using LoaderContainer**
+PRs and feedback are welcome!
+If you use this tool at your company, please consider [starring the template repo](https://github.com/react18-tools/turborepo-template) ⭐
 
-`LoaderContainer` is a fullscreen component. You can add this component directly in your layout and then use `useLoader` hook to toggle its visibility.
-
-```tsx
-// layout.tsx
-<LoaderContainer />
-	 ...
-```
-
-```tsx
-// some other page or component
-import { useLoader } from "create-r18-turborepo/dist/hooks";
-
-export default MyComponent() {
-	const { setLoading } = useLoader();
-	useCallback(()=>{
-		setLoading(true);
-		...do some work
-		setLoading(false);
-	}, [])
-	...
-}
-```
+---
 
 ## License
 
 This library is licensed under the MPL-2.0 open-source license.
-
-
 
 > <img src="https://raw.githubusercontent.com/mayank1513/mayank1513/main/popper.png" style="height: 20px"/> Please enroll in [our courses](https://mayank-chaudhari.vercel.app/courses) or [sponsor](https://github.com/sponsors/mayank1513) our work.
 
