@@ -64,7 +64,13 @@ try {
     `gh release create ${VERSION} --generate-notes --latest -n "$(sed '1,/^## /d;/^## /,$d' lib/CHANGELOG.md)" --title "Release v${VERSION}"`,
   );
 } catch {
-  execSync(`gh release create ${VERSION} --generate-notes --latest --title "Release v${VERSION}"`);
+  try {
+    execSync(
+      `gh release create ${VERSION} --generate-notes --latest --title "Release v${VERSION}"`,
+    );
+  } catch {
+    // ignore
+  }
 }
 
 try {
@@ -73,4 +79,6 @@ try {
 } catch {
   console.error("Failed to publish canonical packages");
 }
-
+
+execSync("node ./scripts/lite.js");
+execSync(`cd lib && pnpm build && npm publish ${provenance} --access public`);

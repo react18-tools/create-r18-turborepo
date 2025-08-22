@@ -25,19 +25,20 @@ export const askQuestion = (query: string): Promise<string> => {
     input: process.stdin,
     output: process.stdout,
   });
-  return new Promise(resolve =>
+  return new Promise(resolve => {
     rl.question(query, ans => {
       rl.close();
       resolve(ans);
-    }),
-  );
+    });
+    rl.write(DEFAULT_NAME);
+  });
 };
 
 const main = async (): Promise<void> => {
   let projectName = process.argv[2];
 
   if (!projectName) {
-    const input = await askQuestion(`Project name (default: ${DEFAULT_NAME}): `);
+    const input = await askQuestion(`Project name: `);
     projectName = input.trim() || DEFAULT_NAME;
   }
 
