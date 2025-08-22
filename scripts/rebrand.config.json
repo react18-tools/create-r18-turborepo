@@ -1,6 +1,6 @@
 {
+  "packageName": "create-r18-turborepo",
   "owner": "react18-tools",
-  "repo": "turborepo-template",
-  "packageName": "react18-loaders",
-  "title": "React18 Loaders"
+  "repo": "create-r18-turborepo",
+  "title": "Create R18 Turborepo"
 }
