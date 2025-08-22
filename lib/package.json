@@ -3,11 +3,8 @@
   "author": "Mayank Kumar Chaudhari (https://mayank-chaudhari.vercel.app)",
   "private": false,
   "version": "0.0.0",
-  "description": "",
+  "description": "CLI utility to bootstrap new projects using the react18-tools turborepo template. Runs create-turbo with the template, auto-detects the project folder, and rebrands it for immediate development.",
   "license": "MPL-2.0",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
   "repository": "github:react18-tools/create-r18-turborepo",
   "bugs": "https://github.com/react18-tools/create-r18-turborepo/issues",
   "homepage": "https://github.com/react18-tools/create-r18-turborepo/#readme",
@@ -15,12 +12,10 @@
   "files": [
     "dist/**"
   ],
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
-    }
+  "bin": {
+    "create-r18-turborepo": "dist/index.mjs",
+    "create-r18-turbo": "dist/index.mjs",
+    "create-r18": "dist/index.mjs"
   },
   "scripts": {
     "build": "tsup && tsc -p tsconfig-build.json && gzip -c dist/index.js | wc -c",
@@ -34,35 +29,13 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@testing-library/react": "^16.3.0",
     "@types/node": "^24.3.0",
-    "@types/react": "^19.1.10",
-    "@types/react-dom": "^19.1.7",
-    "@vitejs/plugin-react": "^5.0.1",
     "@vitest/coverage-v8": "^3.2.4",
     "esbuild-plugin-rdi": "^0.0.0",
-    "esbuild-plugin-react18": "0.2.6",
-    "esbuild-plugin-react18-css": "^0.0.4",
-    "jsdom": "^26.1.0",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
     "tsup": "^8.5.0",
     "typescript": "^5.9.2",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.4"
-  },
-  "dependencies": {
-    "r18gs": "^3.0.1"
-  },
-  "peerDependencies": {
-    "@types/react": ">=16.8",
-    "next": ">=10",
-    "react": ">=16.8"
-  },
-  "peerDependenciesMeta": {
-    "next": {
-      "optional": true
-    }
   },
   "funding": [
     {
@@ -75,22 +48,25 @@
     }
   ],
   "keywords": [
-    "React",
-    "React Loaders",
+    "Turborepo",
+    "Turborepo template",
+    "Monorepo",
+    "Monorepo setup",
+    "Monorepo boilerplate",
+    "React monorepo",
+    "Next.js monorepo",
+    "Pnpm",
+    "Workspace",
+    "Full-stack starter",
     "React 18",
     "React 19",
-    "Next.js",
     "Next.js 14",
     "Next.js 15",
     "React server components",
-    "Customizable",
-    "Cutting-edge",
-    "Compatibility",
     "Frontend development",
-    "UI components",
     "Web development",
-    "Progressive",
-    "Modern",
-    "Seamless integration"
+    "Scaffolding tool",
+    "Project generator",
+    "Developer tooling"
   ]
 }
