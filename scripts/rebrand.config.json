@@ -2,5 +2,15 @@
   "packageName": "create-r18-turborepo",
   "owner": "react18-tools",
   "repo": "create-r18-turborepo",
-  "title": "Create R18 Turborepo"
+  "title": "Create R18 Turborepo",
+  "removedPackages": [
+    "examples/express",
+    "packages/logger"
+  ],
+  "removedFeatures": [
+    "Rebrander",
+    "Docs",
+    "Generators",
+    "LiteMode"
+  ]
 }
