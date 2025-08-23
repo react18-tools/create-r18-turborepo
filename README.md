@@ -1,7 +1,7 @@
 # Create React18 Turborepo <img src="https://raw.githubusercontent.com/mayank1513/mayank1513/main/popper.png" style="height: 40px"/>
 
 [![test](https://github.com/react18-tools/create-r18-turborepo/actions/workflows/test.yml/badge.svg)](https://github.com/react18-tools/create-r18-turborepo/actions/workflows/test.yml)
-[![Maintainability](https://qlty.sh/gh/react18-tools/projects/create-r18-turborepo/maintainability.svg)](https://qlty.sh/gh/react18-tools/projects/create-r18-turborepo)
+[![Maintainability](https://qlty.sh/badges/52e55386-4602-4369-a6af-28309a0ef537/maintainability.svg)](https://qlty.sh/gh/react18-tools/projects/create-r18-turborepo)
 [![codecov](https://codecov.io/gh/react18-tools/create-r18-turborepo/graph/badge.svg)](https://codecov.io/gh/react18-tools/create-r18-turborepo)
 [![Version](https://img.shields.io/npm/v/create-r18-turborepo.svg?colorB=green)](https://www.npmjs.com/package/create-r18-turborepo)
 [![Downloads](https://img.jsdelivr.com/img.shields.io/npm/d18m/create-r18-turborepo.svg)](https://www.npmjs.com/package/create-r18-turborepo)
